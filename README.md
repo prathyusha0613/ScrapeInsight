@@ -11,7 +11,7 @@ Earlier versions of the code have been archived in the `progressions` folder for
 - `webScrape3.py` 
 - ...
 
-### PROJECT OVERVIEW
+## PROJECT OVERVIEW
 ScrapeInsight is a web scraping tool designed to extract, analyze, and visualize text data from webpages. 
 The tool allows users to input a webpage URL and perform targeted data analysis, such as finding sentences containing specific words, extracting words of a certain character length, and visualizing word frequency through line chart. 
 
