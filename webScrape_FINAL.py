@@ -46,10 +46,10 @@ def analyze_and_visualize(words_list):
 if __name__ == "__main__":
     target_url = input("Enter the URL to scrape: ")
     with concurrent.futures.ThreadPoolExecutor() as executor:
-        # Parallelize the execution of the functions for each URL
+        # parallel execution
         sentences_result = list(executor.map(scrape_sentences_with_word, [target_url]))
         words_result = list(executor.map(scrape_words_by_length, [target_url]))
-    # Flatten the results from parallel execution
+    
     sentences_list = [sentence for sublist in sentences_result for sentence in sublist]
     words_list = [word for sublist in words_result for word in sublist]
   
