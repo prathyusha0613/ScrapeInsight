@@ -5,7 +5,7 @@ def scrape_quotes(url):
        response = requests.get(url)
        soup = BeautifulSoup(response.text, 'html.parser')
 
-       # Extract quotes and authors
+       # Extracting quotes and authors
        quotes = soup.select('.quote .text')
        authors = soup.select('.quote .author')
 
@@ -16,8 +16,7 @@ def scrape_quotes(url):
                file.write(f"{quote.get_text()} - {author.get_text()}\n")
 
 if __name__ == "__main__":
-       # Specify the URL to scrape
+       # Specifying the URL to scrape
        target_url = 'http://quotes.toscrape.com'
        
-       # Call the scrape_quotes function
        scrape_quotes(target_url)
